@@ -29,9 +29,9 @@ export const Main = () => {
             <div key={x.id} className="rounded bg-slate-50 p-2">
               <div className="font-semibold text-xl">{x.title}</div>
               <div>{x.description}</div>
-              <div className="italic text-slate-500">
+              {/* <div className="italic text-slate-500">
                 {new Date().toLocaleDateString("en-GB")}
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
