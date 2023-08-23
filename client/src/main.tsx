@@ -21,7 +21,7 @@ export const Main = () => {
   return (
     <div className="flex flex-col h-screen">
       <div className="bg-yellow-500 p-2 text-slate-50 font-semibold text-2xl">
-        Southwest JS 1
+        Southwest JS
       </div>
       <div className="p-2 bg-slate-200 flex-grow">
         <div className="flex space-x-2">
