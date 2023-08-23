@@ -2,8 +2,8 @@ import { PrismaClient } from "@prisma/client";
 import cors from "cors";
 import express from "express";
 
-process.on("SIGTERM", process.exit);
-process.on("SIGINT", process.exit);
+process.on("SIGTERM", process.exit());
+process.on("SIGINT", process.exit());
 
 const app = express();
 app.use(cors());
