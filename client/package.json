@@ -1,7 +1,7 @@
 {
-  "name": "unofficial_glasto",
+  "name": "southwest_js",
   "version": "1.0.0",
-  "description": "unofficial_glasto",
+  "description": "southwest_js",
   "repository": {},
   "scripts": {
     "build-local": "webpack --env ENVIRONMENT=local --mode production",
