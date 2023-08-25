@@ -28,7 +28,7 @@ services:
     build:
       context: ./client
       args:
-        CONFIGURATION: "local"
+        CONFIGURATION: "debug"
     ports:
       - "3000:3000"
 volumes:
