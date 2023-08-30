@@ -10,7 +10,7 @@ const port = 8000;
 
 const prisma = new PrismaClient();
 
-console.log("TEST DEPLOY 123");
+console.log("TEST DEPLOY 12");
 app.post("/api/talks", async (req, res) => {
   const data = req.body as Talk;
   const talk = await prisma.talk.create({
