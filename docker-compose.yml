@@ -16,14 +16,18 @@ services:
       POSTGRES_DB: postgres
       POSTGRES_USER: app_user
       POSTGRES_PASSWORD: password
-  api:
+  api1:
     build: ./server
     ports:
       - "8000"
-    deploy:
-      replicas: 2
-      update_config:
-        order: start-first
+    environment:
+      DATABASE_URL: "postgresql://app_user:password@db:5432/postgres"
+  api2:
+    build: ./server
+    depends_on:
+      - api1
+    ports:
+      - "8000"
     environment:
       DATABASE_URL: "postgresql://app_user:password@db:5432/postgres"
   client:
