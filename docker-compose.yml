@@ -20,9 +20,6 @@ services:
     build: ./server
     ports:
       - "8000"
-    healthcheck:
-      test:
-        ["CMD", "curl", "-X", "OPTIONS", "http://localhost:8000/healthcheck"]
     environment:
       DATABASE_URL: "postgresql://app_user:password@db:5432/postgres"
   client:
