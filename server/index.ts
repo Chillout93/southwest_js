@@ -25,6 +25,13 @@ app.get("/api/talks", async (req, res) => {
 
 app.options("/healthcheck", (req, res) => res.send());
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
+});
+
+process.on("SIGTERM", (e) => {
+  server.close();
+});
+process.on("SIGINT", (e) => {
+  server.close();
 });

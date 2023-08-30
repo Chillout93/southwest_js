@@ -6,5 +6,6 @@ RUN npm i
 
 COPY . .
 RUN npx prisma generate
+RUN npm run-script build 
 
-CMD npx prisma migrate deploy && npm start
+CMD npx prisma migrate deploy && exec node index.js
