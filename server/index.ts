@@ -18,7 +18,6 @@ app.post("/api/talks", async (req, res) => {
 });
 
 app.get("/api/talks", async (req, res) => {
-  console.log("PID: ", process.pid);
   const result = await prisma.talk.findMany();
   res.send(result);
 });
